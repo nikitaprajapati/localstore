@@ -1,0 +1,131 @@
+.font-13{
+	font-size: 13px !important;
+} 
+.font-15{
+	font-size: 15px !important;
+} 
+.font-14{
+    font-size: 14px !important;
+} 
+.font-19{
+    font-size: 19px !important;
+} 
+.font-600{ font-weight: 600!important;}
+.font-400{ font-weight: 400;}
+.order-block .label {
+    width: 75% !important;
+    font-size: 14px;
+}
+.order-block .p_qty {
+    border: 2px solid #8f99a4 !important;
+    border-radius: 0px !important;
+    font-size: 13px !important;
+    padding: 5px !important;
+}
+
+.navbar.theme-blue, .searchbar.theme-blue, .subnavbar.theme-blue, .theme-blue .navbar, .theme-blue .searchbar, .theme-blue .subnavbar, .theme-blue .toolbar, .toolbar.theme-blue {
+    background-color: #566676 !important;
+}
+.page {
+    background: #f5f5f5 !important;
+    color: #212529 !important;
+    }
+.font-20{
+    font-size: 1.9em;
+}
+.bg-light-card{background: #9caab9;}
+
+.btn-olive{
+        background-color: #23a095 !important;
+    border: 1px solid #23a095 !important;
+}
+
+.modal{
+        height: fit-content !important;
+}
+
+.rowapp{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+/*-------- dashboard -----*/
+.widget-bg-color-icon{
+    margin:2em !important;
+}
+.widget-bg-color-icon .bg-icon {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    border-radius: 50%;
+}
+.widget-bg-color-icon .bg-icon i {
+    font-size: 32px;
+    line-height: 80px;
+}
+.text-right {
+    text-align: right!important;
+}
+.right-ttl{
+    font-size: 14px !important;
+    margin-right: 5px;
+}
+
+.widget-bg-color-icon h1{margin-top: 0px !important; font-weight: 600; color:#333;}
+.widget-bg-color-icon h4{margin-top: 15px !important; color:#333; line-height: 1.5em;}
+.widget-bg-color-icon p{color:#333;}
+.username_dash{
+    font-weight: 400;
+    font-size:15px;
+}
+.bg-purple {
+    background-color: #786dbb !important;
+}
+
+.login-bg{    
+    background-image: url('http://starprojects.in/dairy/assets/images/bg.png') !important;
+    position: absolute !important;
+    background-size: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+    top: 0 !important;
+}
+
+.btn-small{padding: 0.4em;border-radius: 3px;}
+.place_order_btn{ width: 100% !important; background-color: #23a095 !important; }
+
+/*----------------Your subscription is inactiv css-------------------*/
+
+.friz_cover{
+
+    width:100%;
+
+    height:100%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    z-index: 9999;
+
+    position:  fixed;
+
+    text-align: center;
+
+}
+
+.cover-data{
+   height: 100%;
+    margin-top: 40%;
+
+}
+.pd-2{ padding: 2px;}
+
+@media screen and (max-height: 400px) and (min-height: 300px) {
+    .cover-data{
+   height: 100%;
+    margin-top: 20%;
+
+}
+}
+
+
+.notifications { top:0 !important; bottom: unset !important; }
