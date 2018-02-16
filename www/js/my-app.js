@@ -65,6 +65,7 @@ function localsave_fun(){
                 
                    
                     alert('success');
+                    $('input').val();
                     mainView.loadPage("index.html");
                     
                  
@@ -75,6 +76,7 @@ function localsave_fun(){
     }else{
         alert('Save In Local');
         window.localStorage.setItem("local_data", form);
+        mainView.loadPage("index.html");
     }
     var si_username = window.localStorage.getItem("local_data");
     //alert(si_username);
@@ -84,10 +86,12 @@ function localsave_fun(){
 function check_connection_save(){
     var networkState = navigator.connection.type;
     var base_url='http://starprojects.in/myci/welcome/';
-    if(networkState!='none')
+    var si_data= window.localStorage.getItem("local_data");
+    if(si_data!=null)
     { 
-        var si_data= window.localStorage.getItem("local_data");
-        alert("session"+si_data);
+       
+        if(networkState!='none'){
+        //alert("session"+si_data);
         $$.ajax({
              type: 'POST',
              url  : base_url+'localsave_fun',
@@ -95,15 +99,19 @@ function check_connection_save(){
              cache: false,
              success: function(res) {
                 
-                   alert('save');
-                    console.log(res);
-
-                    
-                 
+                if(res!=""){
+                 //  alert('save');
+                  //  console.log(res);
+                    $('.localdb').html('Local Data Save In DB');
+                   window.localStorage.removeItem("local_data"); 
+                 }
                  
               }
             });
+    }
 
+    }else{
+         $('.localdb').html('');
     }
 }
 
