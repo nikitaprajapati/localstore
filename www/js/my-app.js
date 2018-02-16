@@ -32,7 +32,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 $( document ).ready(function() {  
-    
+    check_connection_save();
  });
  
 
@@ -64,7 +64,7 @@ function localsave_fun(){
              success: function(res) {
                 
                    
-                    alert('success');
+                    //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ('success');
                     $('input').val();
                     mainView.loadPage("index.html");
                     
@@ -74,11 +74,12 @@ function localsave_fun(){
             });
 
     }else{
-        alert('Save In Local');
+        //alert('Save In Local');
         window.localStorage.setItem("local_data", form);
+        $('input').val();
         mainView.loadPage("index.html");
     }
-    var si_username = window.localStorage.getItem("local_data");
+    //var si_username = window.localStorage.getItem("local_data");
     //alert(si_username);
 }
 
@@ -102,8 +103,9 @@ function check_connection_save(){
                 if(res!=""){
                  //  alert('save');
                   //  console.log(res);
+                  window.localStorage.removeItem("local_data");
                     $('.localdb').html('Local Data Save In DB');
-                   window.localStorage.removeItem("local_data"); 
+                    mainView.loadPage("index.html");
                  }
                  
               }
