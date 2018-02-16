@@ -43,6 +43,7 @@ function localsave_fun(){
     alert('call');
     var si_username= window.localStorage.getItem("local_data");
     var form = $(".localsave").serialize()+ '&' +si_username;
+    var form1=$(".localsave").serialize();
     var base_url='http://starprojects.in/myci/welcome/';
     //var arr=[];
     //alert($(".total_crates").html());
@@ -59,7 +60,7 @@ function localsave_fun(){
           $$.ajax({
              type: 'POST',
              url  : base_url+'localsave_fun',
-             data: form,
+             data: form1,
              cache: false,
              success: function(res) {
                 
